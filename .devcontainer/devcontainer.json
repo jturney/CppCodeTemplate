@@ -1,0 +1,36 @@
+{
+  "name": "C++ Project",
+  //   "build": {
+  // "dockerfile": "base.Dockerfile"
+  //   },
+  "image": "jetturney/code-dev:latest",
+  "runArgs": [
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined",
+    "--userns=host"
+  ],
+  "settings": {
+    "terminal.integrated": {
+      "profiles.linux": {
+        "zsh": {
+          "path": "zsh"
+        }
+      },
+      "defaultProfile.linux": "zsh"
+    },
+    "files.eol": "\n",
+    "resmon.show.battery": false,
+    "resmon.show.cpufreq": false
+  },
+  "remoteUser": "vscode",
+  "extensions": [
+    "ms-vscode.cmake-tools",
+    "twxs.cmake",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "vadimcn.vscode-lldb",
+    "matepek.vscode-catch2-test-adapter",
+    "mutantdino.resourcemonitor",
+    "tabnine.tabnine-vscode"
+  ]
+}
